@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tweeter / Home</title>
+  <script src="https://cdn.tailwindcss.com">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            customBlue: '#1da1f2',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    * {
+      overflow-x: hidden;
+      overflow-y: auto;
+      scrollbar-width: none;
+      box-sizing: border-box;
+    }
+  </style>
+  <link rel="shortcut icon" href="./img/x-twitter-brands-solid-full.svg" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    
+    <div class="mainContainer flex gap-5 w-full min-h-screen lg:px-5">
+      <div class="first flex flex-col justify-between px-4 ms-1  md:ms-10 lg:ms-15 ">
+        <div class="logo p-2">
+          <img class="h-10" src="./img/x-twitter-brands-solid-full.svg" alt="X-logo" />
+        </div>
+        <ul class="nav-list flex flex-col gap-3 mt-5">
+          <li class="nav-content flex items-center">
+            <img
+              class="h-5 bg:h-7 px-3"
+              src="./img/home_47dp_000000_FILL0_wght700_GRAD200_opsz48.svg"
+              alt="nav-icons"
+            /><a class="active:font-bold text-l bg:text-xl sm:hidden md:inline hidden" href="#">Home</a>
+          </li>
+          <li class="nav-content flex items-center">
+            <img
+              class="h-5 bg:h-7 px-3"
+              src="./img/search_47dp_000000_FILL0_wght700_GRAD200_opsz48.svg"
+              alt="nav-icons"
+            /><a class=" active:font-bold text-l bg:text-xl sm:hidden md:inline hidden" href="#">Explore</a>
+          </li>
+          <li class="nav-content flex items-center">
+            <img
+              class="h-5 bg:h-7 px-3"
+              src="./img/notifications_47dp_000000_FILL0_wght700_GRAD200_opsz48.svg"
+              alt="nav-icons"
+            /><a class=" active:font-bold text-l bg:text-xl sm:hidden md:inline hidden" href="#"
+              >Notifications</a
+            >
+          </li>
+          <li class="nav-content flex items-center">
+            <img
+              class="h-5 bg:h-7 px-3"
+              src="./img/person_add_47dp_000000_FILL0_wght700_GRAD200_opsz48.svg"
+              alt="nav-icons"
+            /><a class="active:font-bold text-l bg:text-xl sm:hidden md:inline hidden" href="#">Follow</a>
+          </li>
+          <li class="nav-content flex items-center">
+            <img
+              class="h-5 bg:h-7 px-3"
+              src="./img/mail_47dp_000000_FILL0_wght700_GRAD200_opsz48.svg"
+              alt="nav-icons"
+            /><a class=" active:font-bold text-l bg:text-xl sm:hidden md:inline hidden" href="#">Chat</a>
+          </li>
+          <li class="nav-content flex items-center">
+            <img class="h-5 bg:h-7 px-3" src="./img/grok.svg" alt="nav-icons" /><a
+              class=" active:font-bold text-l bg:text-xl sm:hidden md:inline hidden"
+              href="#"
+              >Grok</a
+            >
+          </li>
+          <li class="nav-content flex items-center">
+            <img class="h-5 bg:h-7 px-3" src="./img/bookmark_47dp_000000_FILL0_wght700_GRAD200_opsz48.svg" alt="nav-icons" /><a
+              class=" active:font-bold text-l bg:text-xl sm:hidden md:inline hidden"
+              href="#"
+              >Bookmarks</a
+            >
+          </li>
+          <li class="nav-content flex items-center">
+            <img class="h-5 bg:h-7 px-3" src="./img/experiment_47dp_000000_FILL0_wght700_GRAD200_opsz48.svg" alt="nav-icons" /><a
+              class=" active:font-bold text-l bg:text-xl sm:hidden md:inline hidden"
+              href="#"
+              >Creater Studio</a
+            >
+          </li>
+          <li class="nav-content flex items-center">
+            <img class="h-5 bg:h-7 px-3" src="./img/x-twitter-brands-solid-full.svg" alt="nav-icons" /><a
+              class=" active:font-bold text-l bg:text-xl sm:hidden md:inline hidden"
+              href="#"
+              >Premium</a
+            >
+          </li>
+          <li class="nav-content flex items-center">
+            <img
+              class="h-5 bg:h-7 px-3"
+              src="./img/person_47dp_000000_FILL0_wght700_GRAD200_opsz48.svg"
+              alt="nav-icons"
+            /><a class=" active:font-bold text-l bg:text-xl sm:hidden md:inline hidden" href="#">Profile</a>
+          </li>
+          <li class="nav-content flex items-center">
+            <img
+              class="h-5 bg:h-7 px-3"
+              src="./img/pending_47dp_000000_FILL0_wght700_GRAD200_opsz48.svg"
+              alt="nav-icons"
+            /><a class=" active:font-bold text-l bg:text-xl sm:hidden md:inline hidden" href="#">More</a>
+          </li>
+          <button class="mx-2 bg-black w-1/2 my-1 text-white font-bold p-1 rounded-full flex items-center justify-center gap-2">
+            <img class="invert sm:inline  md:hidden lg:hidden" src="./img/eco_36dp_000000_FILL0_wght400_GRAD0_opsz40.svg" alt="">
+            <span class=" hidden sm:hidden md:inline lg:inline">Post</span>
+          </button>
+        </ul>
+        <div class="profile flex items-center lg:mx-0 mt-auto my-3 w-full">
+          <img
+            class="border border-black-500 rounded-full"
+            height="45"
+            width="45"
+            src="./img/person_47dp_000000_FILL0_wght700_GRAD200_opsz48.svg"
+            alt="profile-pic"
+          />
+          <div class="name hidden sm:hidden md:block lg:block mx-2">
+            <div class="name text-[11px] font-bold">Mahi Kumar</div>
+            <div class="userName text-[10px]">@MahiKumar0000</div>
+          </div>
+          <button class="hidden sm:hidden md:inline lg:inline">...</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- middle pard -->
+    
+    <div class="mainContainer overflow-y-auto h-screen">
+        <span class="flex justify-around bg-gray-200 sticky top-0 opacity-80 z-1 sm:h-12 pb-2 mb-1"><span class="my-2 hover:border-b-4 border-blue-600">For you</span><span class="my-2 hover:border-b-4 border-blue-600">Following</span></span>
+
+      <div class="z-0">
+        <!-- <span class="flex justify-around border-b-2 mt-2 border-gray-300 bg-gray-600 sticky top-1"><span class="my-2 hover:border-b-4 border-blue-600 ">For you</span><span class="my-2 hover:border-b-4 border-blue-600 ">Following</span></span> -->
+        <div class="inputContainer flex items-center gap-2 px-4 pt-4 pb-16">
+          <img
+            src="./img/person_47dp_000000_FILL0_wght700_GRAD200_opsz48.svg"
+            alt="profile"
+            class="w-7 h-7 rounded-full border border-gray-300"
+          />
+          <input class="outline-none w-[90%] ps-2" type="text" placeholder="What's happening?" />
+        </div>
+        <div class="postFooter flex justify-between items-center mx-8 border-b-2 my-2 border-gray-300">
+          <div class="postFooterOption flex mb-3">
+            <img class="h-5 px-1" src="./img/image_47dp_000000_FILL0_wght400_GRAD0_opsz48.svg" alt="icon" />
+            <img class="h-5 px-1" src="./img/gif_box_47dp_000000_FILL0_wght400_GRAD0_opsz48.svg" alt="icon" />
+            <img class="h-5 px-1" src="./img/grok.svg" alt="icon" />
+            <img class="h-5 px-1" src="./img/list_47dp_000000_FILL0_wght400_GRAD0_opsz48.svg" alt="icon" />
+            <img class="h-5 px-1" src="./img/calendar_clock_47dp_000000_FILL0_wght400_GRAD0_opsz48.svg" alt="icon" />
+            <img class="h-5 px-1" src="./img/pin_drop_47dp_000000_FILL0_wght400_GRAD0_opsz48.svg" alt="icon" />
+          </div>
+          <button class="bg-black text-white px-2 rounded-full">Post</button>
+        </div>
+      </div>
+      <div class="loadPosts w-full text-center my-5 text-blue-500">
+        Show 665 posts
+      </div>
+
+      <div class="posts-container border-t-2 border-gray-300">
+        <div class="details flex justify-between mx-5">
+            <div class="left-detail flex my-2">
+                <img src="./img/person_47dp_000000_FILL0_wght700_GRAD200_opsz48.svg" alt="profile" class="w-7 h-7 rounded-full border border-gray-300 mx-2" />
+                <div class="user-info">
+                    <div class="flex gap-2 items-center">
+                        <span class="capitalize font-bold">name Kumar</span> 
+                        <img class="h-5" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8peEclRgDCbUit_027rU4RR5vbeuHSMY5mQ&s" alt="bluetick">
+                        <span class="text-gray-600">@Username</span>
+                        <span class="text-gray-600">.00h</span>
+                    </div>
+                    <div>Lorem, ipsum doloor int aspernatur dolore, error ex labo</div>
+                </div>
+            </div>
+            <div class="right-detail flex items-center gap-2">
+                <img src="./img/grok.svg" alt="icon">
+                <span class="pb-2">...</span>
+            </div>
+        </div>
+
+        <div class="post-media mb-5">
+            <video class="w-[90%]  m-auto rounded-lg" src="./videos/12688005_3840_2160_30fps.mp4" controls muted autoplay loop alt="post-media"></video>
+        </div>
+
+        <div class="post-footer flex justify-between items-center mx-5 ps-4 mb-5">
+            <span class="flex items-center gap-2">
+                <img src="./img/chat_47dp_000000_FILL0_wght400_GRAD0_opsz48.svg" alt="logo" class="h-5">
+                <span>23</span>
+            </span>
+            <span class="flex items-center gap-2">
+                <img src="./img/repeat_47dp_000000_FILL0_wght400_GRAD0_opsz48.svg" alt="logo" class="h-5"><span>23</span></span>
+            <span class="flex items-center gap-2">
+                <img src="./img/favorite_47dp_000000_FILL0_wght400_GRAD0_opsz48.svg" alt="logo" class="h-5"><span>23</span></span>
+            <span class="flex items-center gap-2">
+                <img src="./img/bar_chart_4_bars_47dp_000000_FILL0_wght400_GRAD0_opsz48.svg" alt="logo" class="h-5"><span>23</span></span>
+            <span class="flex">
+                <img class="h-5 px-1" src="./img/bookmark_47dp_000000_FILL0_wght700_GRAD200_opsz48.svg" alt="icon">
+                <img class="h-5 px-1" src="./img/share_47dp_000000_FILL0_wght400_GRAD0_opsz48.svg" alt="icon">
+            </span>
+        </div>
+      </div>
+
+    <div class="posts-container border-t-2 border-gray-300">
+        <div class="details flex justify-between mx-5">
+            <div class="left-detail flex my-2">
+                <img src="./img/person_47dp_000000_FILL0_wght700_GRAD200_opsz48.svg" alt="profile" class="w-7 h-7 rounded-full border border-gray-300 mx-2" />
+                <div class="user-info">
+                    <div class="flex gap-2 items-center">
+                        <span class="capitalize font-bold">name Kumar</span> 
+                        <img class="h-5" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8peEclRgDCbUit_027rU4RR5vbeuHSMY5mQ&s" alt="bluetick">
+                        <span class="text-gray-600">@Username</span>
+                        <span class="text-gray-600">.00h</span>
+                    </div>
+                    <div>Lorem, ipsum doloor int aspernatur dolore, error ex labo</div>
+                </div>
+            </div>
+            <div class="right-detail flex items-center gap-2">
+                <img src="./img/grok.svg" alt="icon">
+                <span class="pb-2">...</span>
+            </div>
+        </div>
+
+        <div class="post-media mb-5">
+            <video class="w-[90%]  m-auto rounded-lg" src="./videos/12742485_3840_2160_30fps.mp4" controls muted autoplay loop alt="post-media"></video>
+        </div>
+
+        <div class="post-footer flex justify-between items-center mx-5 ps-4 mb-5">
+            <span class="flex items-center gap-2">
+                <img src="./img/chat_47dp_000000_FILL0_wght400_GRAD0_opsz48.svg" alt="logo" class="h-5">
+                <span>23</span>
+            </span>
+            <span class="flex items-center gap-2">
+                <img src="./img/repeat_47dp_000000_FILL0_wght400_GRAD0_opsz48.svg" alt="logo" class="h-5"><span>23</span></span>
+            <span class="flex items-center gap-2">
+                <img src="./img/favorite_47dp_000000_FILL0_wght400_GRAD0_opsz48.svg" alt="logo" class="h-5"><span>23</span></span>
+            <span class="flex items-center gap-2">
+                <img src="./img/bar_chart_4_bars_47dp_000000_FILL0_wght400_GRAD0_opsz48.svg" alt="logo" class="h-5"><span>23</span></span>
+            <span class="flex">
+                <img class="h-5 px-1" src="./img/bookmark_47dp_000000_FILL0_wght700_GRAD200_opsz48.svg" alt="icon">
+                <img class="h-5 px-1" src="./img/share_47dp_000000_FILL0_wght400_GRAD0_opsz48.svg" alt="icon">
+            </span>
+        </div>
+      </div>
+
+      <div class="posts-container border-t-2 border-gray-300">
+        <div class="details flex justify-between mx-5">
+            <div class="left-detail flex my-2">
+                <img src="./img/person_47dp_000000_FILL0_wght700_GRAD200_opsz48.svg" alt="profile" class="w-7 h-7 rounded-full border border-gray-300 mx-2" />
+                <div class="user-info">
+                    <div class="flex gap-2 items-center">
+                        <span class="capitalize font-bold">name Kumar</span> 
+                        <img class="h-5" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8peEclRgDCbUit_027rU4RR5vbeuHSMY5mQ&s" alt="bluetick">
+                        <span class="text-gray-600">@Username</span>
+                        <span class="text-gray-600">.00h</span>
+                    </div>
+                    <div>Lorem, ipsum doloor int aspernatur dolore, error ex labo</div>
+                </div>
+            </div>
+            <div class="right-detail flex items-center gap-2">
+                <img src="./img/grok.svg" alt="icon">
+                <span class="pb-2">...</span>
+            </div>
+        </div>
+
+        <div class="post-media mb-5">
+            <video class="w-[90%]  m-auto rounded-lg" src="./videos/14516365_2160_3840_60fps.mp4" controls muted autoplay loop alt="post-media"></video>
+        </div>
+
+        <div class="post-footer flex justify-between items-center mx-5 ps-4 mb-5">
+            <span class="flex items-center gap-2">
+                <img src="./img/chat_47dp_000000_FILL0_wght400_GRAD0_opsz48.svg" alt="logo" class="h-5">
+                <span>23</span>
+            </span>
+            <span class="flex items-center gap-2">
+                <img src="./img/repeat_47dp_000000_FILL0_wght400_GRAD0_opsz48.svg" alt="logo" class="h-5"><span>23</span></span>
+            <span class="flex items-center gap-2">
+                <img src="./img/favorite_47dp_000000_FILL0_wght400_GRAD0_opsz48.svg" alt="logo" class="h-5"><span>23</span></span>
+            <span class="flex items-center gap-2">
+                <img src="./img/bar_chart_4_bars_47dp_000000_FILL0_wght400_GRAD0_opsz48.svg" alt="logo" class="h-5"><span>23</span></span>
+            <span class="flex">
+                <img class="h-5 px-1" src="./img/bookmark_47dp_000000_FILL0_wght700_GRAD200_opsz48.svg" alt="icon">
+                <img class="h-5 px-1" src="./img/share_47dp_000000_FILL0_wght400_GRAD0_opsz48.svg" alt="icon">
+            </span>
+        </div>
+      </div>
+
+      <div class="posts-container border-t-2 border-gray-300">
+        <div class="details flex justify-between mx-5">
+            <div class="left-detail flex my-2">
+                <img src="./img/person_47dp_000000_FILL0_wght700_GRAD200_opsz48.svg" alt="profile" class="w-7 h-7 rounded-full border border-gray-300 mx-2" />
+                <div class="user-info">
+                    <div class="flex gap-2 items-center">
+                        <span class="capitalize font-bold">name Kumar</span> 
+                        <img class="h-5" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8peEclRgDCbUit_027rU4RR5vbeuHSMY5mQ&s" alt="bluetick">
+                        <span class="text-gray-600">@Username</span>
+                        <span class="text-gray-600">.00h</span>
+                    </div>
+                    <div>Lorem, ipsum doloor int aspernatur dolore, error ex labo</div>
+                </div>
+            </div>
+            <div class="right-detail flex items-center gap-2">
+                <img src="./img/grok.svg" alt="icon">
+                <span class="pb-2">...</span>
+            </div>
+        </div>
+
+        <div class="post-media mb-5">
+            <img class="w-[90%]  m-auto rounded-lg" src="./img/hq720.jpg" alt="post-media">
+        </div>
+
+        <div class="post-footer flex justify-between items-center mx-5 ps-4 mb-5">
+            <span class="flex items-center gap-2">
+                <img src="./img/chat_47dp_000000_FILL0_wght400_GRAD0_opsz48.svg" alt="logo" class="h-5">
+                <span>23</span>
+            </span>
+            <span class="flex items-center gap-2">
+                <img src="./img/repeat_47dp_000000_FILL0_wght400_GRAD0_opsz48.svg" alt="logo" class="h-5"><span>23</span></span>
+            <span class="flex items-center gap-2">
+                <img src="./img/favorite_47dp_000000_FILL0_wght400_GRAD0_opsz48.svg" alt="logo" class="h-5"><span>23</span></span>
+            <span class="flex items-center gap-2">
+                <img src="./img/bar_chart_4_bars_47dp_000000_FILL0_wght400_GRAD0_opsz48.svg" alt="logo" class="h-5"><span>23</span></span>
+            <span class="flex">
+                <img class="h-5 px-1" src="./img/bookmark_47dp_000000_FILL0_wght700_GRAD200_opsz48.svg" alt="icon">
+                <img class="h-5 px-1" src="./img/share_47dp_000000_FILL0_wght400_GRAD0_opsz48.svg" alt="icon">
+            </span>
+        </div>
+      </div>
+
+      
+      <div class="posts-container border-t-2 border-gray-300">
+        <div class="details flex justify-between mx-5">
+            <div class="left-detail flex my-2">
+                <img src="./img/person_47dp_000000_FILL0_wght700_GRAD200_opsz48.svg" alt="profile" class="w-7 h-7 rounded-full border border-gray-300 mx-2" />
+                <div class="user-info">
+                    <div class="flex gap-2 items-center">
+                        <span class="capitalize font-bold">name Kumar</span> 
+                        <img class="h-5" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8peEclRgDCbUit_027rU4RR5vbeuHSMY5mQ&s" alt="bluetick">
+                        <span class="text-gray-600">@Username</span>
+                        <span class="text-gray-600">.00h</span>
+                    </div>
+                    <div>Lorem, ipsum doloor int aspernatur dolore, error ex labo</div>
+                </div>
+            </div>
+            <div class="right-detail flex items-center gap-2">
+                <img src="./img/grok.svg" alt="icon">
+                <span class="pb-2">...</span>
+            </div>
+        </div>
+
+        <div class="post-media mb-5">
+            <video class="w-[90%]  m-auto rounded-lg" src="./videos/12688005_3840_2160_30fps.mp4" controls muted autoplay loop alt="post-media"></video>
+        </div>
+
+        <div class="post-footer flex justify-between items-center mx-5 ps-4 mb-5">
+            <span class="flex items-center gap-2">
+                <img src="./img/chat_47dp_000000_FILL0_wght400_GRAD0_opsz48.svg" alt="logo" class="h-5">
+                <span>23</span>
+            </span>
+            <span class="flex items-center gap-2">
+                <img src="./img/repeat_47dp_000000_FILL0_wght400_GRAD0_opsz48.svg" alt="logo" class="h-5"><span>23</span></span>
+            <span class="flex items-center gap-2">
+                <img src="./img/favorite_47dp_000000_FILL0_wght400_GRAD0_opsz48.svg" alt="logo" class="h-5"><span>23</span></span>
+            <span class="flex items-center gap-2">
+                <img src="./img/bar_chart_4_bars_47dp_000000_FILL0_wght400_GRAD0_opsz48.svg" alt="logo" class="h-5"><span>23</span></span>
+            <span class="flex">
+                <img class="h-5 px-1" src="./img/bookmark_47dp_000000_FILL0_wght700_GRAD200_opsz48.svg" alt="icon">
+                <img class="h-5 px-1" src="./img/share_47dp_000000_FILL0_wght400_GRAD0_opsz48.svg" alt="icon">
+            </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Last part -->
+
+    <div class="right-container h-screen overflow-y-auto hidden lg:block">
+    <div class="searchContainer flex border-[1px] rounded-full border-black mx-5 px-4 gap-4 my-5">
+      <img class="h-7 opacity-50" src="./img/search_47dp_000000_FILL0_wght700_GRAD200_opsz48.svg" alt="logo">
+      <input class="outline-none" type="text" placeholder="Search">
+    </div>
+    <div class="premium mx-5 px-5 my-2 shadow-md py-4 rounded-md">
+      <div class="flex items-center gap-2"><span class="font-bold">Subscribe to Premium</span><span
+          class="text-[0.5rem] font-bold text-green-900 bg-green-200 px-1 rounded-full">50%off</span></div>
+      <p class="my-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, voluptate.</p>
+      <button class="px-2 rounded-full text-white bg-sky-600">Subscribe</button>
+    </div>
+
+    <div class="trending mx-5 px-5 border-[1px] border-gray rounded-lg">
+      <h2 class="font-bold text-xl mb-3">What's happening</h2>
+      <div class="flex  mb-3 border-[1px] border-gray p-2 rounded-lg">
+        <div>
+          <p class="text-[12px]">trending in India</p>
+          <p class="text-sm">#duniya_walo_sunlo_baat_pate_ke</p>
+        </div>
+        <p class="ms-6 ps-4">...</p>
+      </div>
+
+      <div class="flex  mb-3 border-[1px] border-gray p-2 rounded-lg">
+        <div>
+          <p class="text-[12px]">trending in India</p>
+          <p class="text-sm">#duniya_walo_sunlo_baat_pate_ke</p>
+        </div>
+        <p class="ms-6 ps-4">...</p>
+      </div>
+
+      <div class="flex  mb-3 border-[1px] border-gray p-2 rounded-lg">
+        <div>
+          <p class="text-[12px]">trending in India</p>
+          <p class="text-sm">#duniya_walo_sunlo_baat_pate_ke</p>
+        </div>
+        <p class="ms-6 ps-4">...</p>
+      </div>
+
+      <div class="flex  mb-3 border-[1px] border-gray p-2 rounded-lg">
+        <div>
+          <p class="text-[12px]">trending in India</p>
+          <p class="text-sm">#duniya_walo_sunlo_baat_pate_ke</p>
+        </div>
+        <p class="ms-6 ps-4">...</p>
+      </div>
+      <div class="more text-sky-600 text-[13px] mb-5">
+        show more
+      </div>
+    </div>
+
+    <div class="followerMainContainer border-[1px] border-gray my-2 mx-5 px-4 rounded-lg">
+      <div class="forFollow my-2">
+      <h3 class="font-bold text-xl px-2 pb-3">Who to Follow</h3>
+      <div class="follwerContainer flex items-center">
+        <div class="left flex items-center">
+          <img class="h-10 border-[1px] border-gray rounded-full m-2 p-1"
+            src="./img/person_47dp_000000_FILL0_wght700_GRAD200_opsz48.svg" alt="logo">
+          <div class="me-5">
+            <div class="name flex items-center text-sm font-bold"><span>Name kumar shukla</span> <img class="h-5 mx-2"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8peEclRgDCbUit_027rU4RR5vbeuHSMY5mQ&s"
+                alt="bluetick"></div>
+            <p class="text-[12px] text-gray">@Usernameunique</p>
+          </div>
+        </div>
+        <button class="px-2 bg-black text-white rounded-full">Follow</button>
+      </div>
+
+      <div class="follwerContainer flex items-center">
+        <div class="left flex items-center">
+          <img class="h-10 border-[1px] border-gray rounded-full m-2 p-1"
+            src="./img/person_47dp_000000_FILL0_wght700_GRAD200_opsz48.svg" alt="logo">
+          <div class="me-5">
+            <div class="name flex items-center text-sm font-bold"><span>Name kumar shukla</span> <img class="h-5 mx-2"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8peEclRgDCbUit_027rU4RR5vbeuHSMY5mQ&s"
+                alt="bluetick"></div>
+            <p class="text-[12px] text-gray">@Usernameunique</p>
+          </div>
+        </div>
+        <button class="px-2 bg-black text-white rounded-full">Follow</button>
+      </div>
+
+      <div class="follwerContainer flex items-center">
+        <div class="left flex items-center">
+          <img class="h-10 border-[1px] border-gray rounded-full m-2 p-1"
+            src="./img/person_47dp_000000_FILL0_wght700_GRAD200_opsz48.svg" alt="logo">
+          <div class="me-5">
+            <div class="name flex items-center text-sm font-bold"><span>Name kumar shukla</span> <img class="h-5 mx-2"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8peEclRgDCbUit_027rU4RR5vbeuHSMY5mQ&s"
+                alt="bluetick"></div>
+            <p class="text-[12px] text-gray">@Usernameunique</p>
+          </div>
+        </div>
+        <button class="px-2 bg-black text-white rounded-full">Follow</button>
+      </div>
+
+      <p class="text-sky-600 text-[13px] py-2 mx-2">show more</p>
+    </div>
+
+    <footer class="right">
+      <ul class="flex flex-wrap gap-2 items-center">
+        <li class="px-2 text-[13px] text-gray-600 border-e ">Terms of Service</li>
+        <li class="px-2 text-[13px] text-gray-600 border-e ">Privacy Policy</li>
+        <li class="px-2 text-[13px] text-gray-600 border-e ">Cookies Policy</li>
+        <li class="px-2 text-[13px] text-gray-600 border-e ">Accessability</li>
+        <li class="px-2 text-[13px] text-gray-600 border-e ">Ads info</li>
+        <div class="px-2 text-[13px] text-gray-600 flex flex-wrap ">
+          <p class="px-2">More...</p>
+          <p class="px-2"> &copy;2026 X Corp.</p>
+        </div>
+      </ul>
+    </footer>
+
+    </div>
+
+</body>
+</html>
